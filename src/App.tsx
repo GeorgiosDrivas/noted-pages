@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="container-fluid">
+        <div className="row h-100">
+          <div className="col-8 p-0">
+            <div
+              id="left"
+              className="h-100 d-flex flex-column justify-content-evenly align-items-start ps-5"
+            >
+              <div
+                id="left-upper"
+                className="d-flex flex-column justify-content-center align-items-start"
+              >
+                <h1>NotedPages</h1>
+                <p className="subtitle">
+                  A place to gather your thoughts about your favourite books...
+                </p>
+              </div>
+              <div id="left-down" className="w-100">
+                <p>Now you can keep notes about your favorite books</p>
+                <ul>
+                  <li>Write the title</li>
+                  <li>Write the author</li>
+                  <li>Provide an image</li>
+                  <li>Provide a specific page if you want to</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="col-4 p-0">
+            <div id="right" className="h-100">
+              <div className="d-flex justify-content-end mt-3 me-4">
+                <button>Sign in</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="position-absolute" id="img">
+          <img src="src\image.png" alt="" />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+// #f0eee2 Left background
+// #fdfcf7 Right background
+// #0e1122 text
