@@ -1,6 +1,9 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [login, setLogin] = useState(false);
+
   return (
     <>
       <div className="container-fluid">
@@ -33,7 +36,7 @@ function App() {
           <div className="col-4 p-0">
             <div id="right" className="h-100">
               <div className="d-flex justify-content-end mt-3 me-4">
-                <button>Sign in</button>
+                <button onClick={() => setLogin((prv) => !prv)}>Sign in</button>
               </div>
             </div>
           </div>
@@ -41,6 +44,20 @@ function App() {
         <div className="position-absolute" id="img">
           <img src="src\image.png" alt="" />
         </div>
+        {login && (
+          <div className="position-absolute login p-3">
+            <h2 className="text-center">Welcome back!</h2>
+            <form>
+              <div>
+                <label htmlFor="username">Username</label>
+                <input type="text" id="username" />
+              </div>
+            </form>
+            <p>
+              Don't have an account? <a href="#">Sign up</a> for free!
+            </p>
+          </div>
+        )}
       </div>
     </>
   );
