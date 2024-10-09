@@ -1,4 +1,4 @@
-import "./register.css";
+import "../../styles/auth.css";
 import BacktoHome from "../backToHome";
 
 export default function Register() {
@@ -10,9 +10,12 @@ export default function Register() {
           <div className="row h-100">
             <div className="col-12 p-0">
               <div className="wrap w-100 h-100 d-flex justify-content-center align-items-center">
-                <div id="register-board">
+                <div
+                  id="board"
+                  className="d-flex justify-content-center flex-column"
+                >
                   <h1 className="text-center">Sign up for free!</h1>
-                  <form>
+                  <form className="d-flex flex-column justify-content-center align-items-center">
                     <div>
                       <label htmlFor="name">Full name</label>
                       <input type="text" id="name" />

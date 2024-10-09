@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./signIn.css";
+import "../../styles/auth.css";
 import BacktoHome from "../backToHome";
 
 export default function SignIn() {
@@ -11,9 +11,12 @@ export default function SignIn() {
           <div className="row h-100">
             <div className="col-12 p-0">
               <div className="wrap h-100 w-100 d-flex justify-content-center align-items-center">
-                <div id="board">
+                <div
+                  id="board"
+                  className="d-flex justify-content-center flex-column"
+                >
                   <h1 className="text-center">Welcome back!</h1>
-                  <form>
+                  <form className="d-flex flex-column justify-content-center align-items-center">
                     <div>
                       <label htmlFor="username">Username</label>
                       <input type="text" id="username" />

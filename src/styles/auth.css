@@ -1,19 +1,12 @@
-#register-board {
+#board {
   background-color: #fff;
   border-radius: 20px;
   width: 600px;
   height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 form {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  margin-top: 40px;
 }
 
 label {
@@ -40,4 +33,8 @@ button {
 button:hover {
   background-color: #0e1122b0;
   text-decoration: none;
+}
+
+a {
+  color: #0e1122;
 }
