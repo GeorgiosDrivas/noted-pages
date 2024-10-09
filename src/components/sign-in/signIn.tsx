@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import "./signIn.css";
+import BacktoHome from "../backToHome";
 
 export default function SignIn() {
   return (
     <>
       <main className="h-100 w-100">
-        <Link to="/" className="ms-3">
-          Home
-        </Link>
+        <BacktoHome />
         <div className="container-fluid">
           <div className="row h-100">
             <div className="col-12 p-0">
