@@ -33,8 +33,11 @@ export default function Landing() {
           </div>
           <div className="col-4 p-0">
             <div id="right" className="h-100">
-              <div className="d-flex justify-content-end mt-3 me-4">
-                <Link to="/sign-in">Sign in</Link>
+              <div className="mt-3 me-4 d-flex justify-content-end">
+                <Link to="/sign-in" className="me-4">
+                  Sign in
+                </Link>
+                <Link to="/sign-up">Register</Link>
               </div>
             </div>
           </div>

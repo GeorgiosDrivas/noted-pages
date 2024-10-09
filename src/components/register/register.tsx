@@ -1,16 +1,19 @@
-import { Link } from "react-router-dom";
-import "./signIn.css";
+import "./register.css";
 
-export default function SignIn() {
+export default function Register() {
   return (
     <>
       <div className="container-fluid">
         <div className="row h-100">
           <div className="col-12 p-0">
-            <div className="wrap h-100 w-100 d-flex justify-content-center align-items-center">
-              <div id="board">
-                <h1 className="text-center">Welcome back!</h1>
+            <div className="wrap w-100 h-100 d-flex justify-content-center align-items-center">
+              <div id="register-board">
+                <h1 className="text-center">Sign up for free!</h1>
                 <form>
+                  <div>
+                    <label htmlFor="name">Full name</label>
+                    <input type="text" id="name" />
+                  </div>
                   <div>
                     <label htmlFor="username">Username</label>
                     <input type="text" id="username" />
@@ -19,12 +22,8 @@ export default function SignIn() {
                     <label htmlFor="password">Password</label>
                     <input type="text" id="password" />
                   </div>
-                  <button type="submit">Sign in</button>
+                  <button type="submit">Sign up</button>
                 </form>
-                <p className="text-center mt-2">
-                  Don't have an account? <Link to="/sign-up">Sign up</Link> for
-                  free!
-                </p>
               </div>
             </div>
           </div>

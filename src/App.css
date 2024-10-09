@@ -14,15 +14,6 @@
   background-color: #fdfcf7;
 }
 
-button {
-  background-color: transparent;
-  border: none;
-  text-decoration: none;
-  transition: all, 3s;
-}
-button:hover {
-  text-decoration: underline;
-}
 h1 {
   font-size: 60px;
 }
@@ -41,6 +32,7 @@ h1 {
 #img {
   top: 0;
   left: 46%;
+  z-index: 0;
 }
 #img img {
   height: 800px;
