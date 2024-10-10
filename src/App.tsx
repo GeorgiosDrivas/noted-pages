@@ -1,25 +1,23 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Landing from "./components/landing";
 import SignIn from "./components/sign-in/signIn";
 import Register from "./components/register/register";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Landing />,
-  },
-  {
-    path: "/sign-in",
-    element: <SignIn />,
-  },
-  {
-    path: "/sign-up",
-    element: <Register />,
-  },
-]);
+import Dashboard from "./components/dashboard";
+import { ProtectedRoutes } from "./utils/protectedRoutes";
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Landing />} path="/" />
+        <Route element={<SignIn />} path="/sign-in" />
+        <Route element={<Register />} path="/sign-up" />
+        <Route element={<ProtectedRoutes />}>
+          <Route element={<Dashboard />} path="/dashboard" />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 // #f0eee2 Left background
